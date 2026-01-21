@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Usuario</title>
+
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<form id="registroForm" action="registro.php" method="POST" novalidate>
+    <h2>Registro de Usuario</h2>
+
+    <label>Nombre completo</label>
+    <input type="text" name="nombre" id="nombre" required>
+
+    <label>Correo electrónico</label>
+    <input type="email" name="email" id="email" required>
+
+    <label>Teléfono</label>
+    <input type="tel" name="telefono" id="telefono" required>
+
+    <label>Contraseña</label>
+    <input type="password" name="password" id="password" required>
+
+    <label>Confirmar contraseña</label>
+    <input type="password" name="confirmar" id="confirmar" required>
+
+    <button type="submit">Registrarse</button>
+</form>
+
+<!-- ALERTAS DESPUÉS DEL REGISTRO -->
+<script>
+const params = new URLSearchParams(window.location.search);
+
+if (params.get("success") === "1") {
+    alert("Registro exitoso. Ahora puedes iniciar sesión.");
+}
+
+if (params.get("error") === "1") {
+    alert("Datos inválidos. Revisa el formulario.");
+}
+
+if (params.get("error") === "2") {
+    alert("Error al guardar en la base de datos.");
+}
+
+if (params.get("error") === "3") {
+    alert("Error interno del servidor.");
+}
+</script>
+
+<script src="validaciones.js"></script>
+</body>
+</html>
