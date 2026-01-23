@@ -3,10 +3,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Fondo con formas abstractas */
+/* Fondo */
 body {
     background: white;
     height: 100vh;
@@ -15,7 +15,7 @@ body {
     align-items: center;
 }
 
-/* Contenedor del formulario */
+/* Contenedor principal */
 form#registroForm {
     background-color: #ffffff;
     padding: 2rem;
@@ -25,7 +25,7 @@ form#registroForm {
     max-width: 400px;
 }
 
-/* Título */
+/* Títulos */
 h2 {
     margin-bottom: 1.5rem;
     color: #000000;
@@ -33,17 +33,19 @@ h2 {
     text-align: left;
 }
 
-/* Etiquetas y campos */
+/* Etiquetas */
 label {
     display: block;
     font-weight: 400;
     color: #000000;
 }
 
+/* Inputs */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
-input[type="password"] {
+input[type="password"],
+select {
     width: 100%;
     padding: 0.75rem;
     margin-bottom: 1rem;
@@ -52,20 +54,21 @@ input[type="password"] {
     transition: border-color 0.3s;
 }
 
-input:focus {
+input:focus,
+select:focus {
     border-color: #00b4d8;
     outline: none;
 }
 
 /* Botón */
-button[type="submit"] {
+button {
     width: 100%;
     padding: 0.75rem;
     background-color: #0077b6;
     color: white;
     border: none;
     border-radius: 8px;
-    font-weight: revert;
+    font-weight: 500;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -74,9 +77,56 @@ button:hover {
     background-color: #023e8a;
 }
 
-/* Mensaje */
+/* Mensajes */
 #mensaje {
     margin-top: 1rem;
     text-align: center;
     color: red;
+}
+
+/* Contenedor general para paneles */
+.panel {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+}
+
+/* Tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+th {
+    background-color: #f1f1f1;
+}
+
+/* Links tipo botón */
+a {
+    color: #0077b6;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Select */
+select {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
 }
