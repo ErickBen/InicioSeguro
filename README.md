@@ -16,6 +16,8 @@ Proyecto web que implementa un formulario de registro de usuarios aplicando buen
 - Hash seguro de contraseñas
 - Prevención de inyección SQL
 - Manejo seguro de errores
+- Roles de usuario
+- Minimo privilegio
 
 ## Instalación
 1. Clonar el repositorio
